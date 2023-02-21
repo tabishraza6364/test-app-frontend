@@ -14,10 +14,6 @@ const Pages = () => {
 
     const emailEditorRef = useRef(null);
 
-    useEffect(() => {
-        fetchPages();
-    }, [fetchPages]);
-
     const loadDesign = () => {
         if (currentPage && pages?.length) {
             const template = pages.find(p => parseInt(p.id) === parseInt(currentPage));
@@ -70,6 +66,10 @@ const Pages = () => {
         setCurrentPage(null);
         onClose();
     };
+
+    useEffect(() => {
+        fetchPages();
+    }, [fetchPages]);
 
     useEffect(() => {
         if (currentPage) {

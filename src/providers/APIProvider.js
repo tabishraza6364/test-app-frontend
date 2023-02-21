@@ -26,7 +26,7 @@ export const APIProvider = ({ children }) => {
     localStorage.removeItem('user');
     showToast('Logged Out.', '', 'success', 1000);
     setTimeout(() => {
-      window.location.href = '/login';
+      window.location.href = '/';
     }, 1200);
   };
 

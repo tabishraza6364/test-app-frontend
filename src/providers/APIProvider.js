@@ -2,7 +2,7 @@ import React, { createContext, useState, useContext } from 'react';
 import axios from 'axios';
 import { showToast } from '../services/helper';
 
-const BASE_URL = 'http://localhost:8080/api';
+const BASE_URL = 'https://south-feline-lightyear.glitch.me/api';
 let APIContext = createContext(null);
 
 export const APIProvider = ({ children }) => {

@@ -16,7 +16,7 @@ const Pages = () => {
 
     useEffect(() => {
         fetchPages();
-    }, []);
+    }, [fetchPages]);
 
     const loadDesign = () => {
         if (currentPage && pages?.length) {

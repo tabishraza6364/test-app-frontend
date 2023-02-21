@@ -10,12 +10,11 @@ import {
   Text,
 } from '@chakra-ui/react';
 import { useAPI } from '../providers/APIProvider';
-import { Link as RouterLink, useNavigate } from "react-router-dom";
+import { Link as RouterLink } from "react-router-dom";
 import { useAuth } from '../providers/AuthProvider';
 import { showToast } from '../services/helper';
 
 const Login = () => {
-  const navigate = useNavigate();
   const { setToken, signin } = useAPI();
   const { setUser } = useAuth();
   const [email, setEmail] = useState('');

@@ -6,8 +6,8 @@ import { showToast } from '../services/helper';
 
 const Pages = () => {
     const { getPages, createPage, updatePage } = useAPI();
-    const { isOpen, onOpen, onClose, getButtonProps } = useDisclosure();
-    const [isFetching, setIsFetching] = useState(false);
+    const { isOpen, onOpen, onClose } = useDisclosure();
+    const [setIsFetching] = useState(false);
     const [isLoading, setIsLoading] = useState(false);
     const [currentPage, setCurrentPage] = useState(null);
     const [pages, setPages] = useState([]);
@@ -16,7 +16,7 @@ const Pages = () => {
 
     useEffect(() => {
         fetchPages();
-    }, []);
+    });
 
     const loadDesign = () => {
         if (currentPage && pages?.length) {
@@ -75,7 +75,7 @@ const Pages = () => {
         if (currentPage) {
             onOpen();
         }
-    }, [currentPage]);
+    }, [currentPage, onOpen]);
 
     return (
         <>

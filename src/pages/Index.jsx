@@ -7,7 +7,7 @@ import { showToast } from '../services/helper';
 const Pages = () => {
     const { getPages, createPage, updatePage } = useAPI();
     const { isOpen, onOpen, onClose } = useDisclosure();
-    const [setIsFetching] = useState(false);
+    // const [setIsFetching] = useState(false);
     const [isLoading, setIsLoading] = useState(false);
     const [currentPage, setCurrentPage] = useState(null);
     const [pages, setPages] = useState([]);
@@ -53,17 +53,17 @@ const Pages = () => {
     };
 
     const fetchPages = () => {
-        setIsFetching(true);
+        // setIsFetching(true);
         getPages()
             .then((response) => {
                 setPages(response.data.pages);
             })
             .catch((error) => {
                 showToast(error?.response?.data?.error || error.message, '', 'error');
-            })
-            .finally(() => {
-                setIsFetching(false);
             });
+            // .finally(() => {
+            //     setIsFetching(false);
+            // });
     };
 
     const _onClose = () => {

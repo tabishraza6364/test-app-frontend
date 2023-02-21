@@ -1,5 +1,5 @@
 import React, { SimpleGrid, Box, Card, CardHeader, Heading, CardBody, Text, Divider, Button, Modal, ModalBody, ModalCloseButton, ModalContent, ModalFooter, ModalHeader, ModalOverlay, useDisclosure, ButtonGroup } from '@chakra-ui/react';
-import { useEffect, useRef, useState } from 'react';
+import { useCallback, useEffect, useRef, useState } from 'react';
 import EmailEditor from 'react-email-editor';
 import { useAPI } from '../providers/APIProvider';
 import { showToast } from '../services/helper';

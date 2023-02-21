@@ -48,7 +48,7 @@ const Pages = () => {
         });
     };
 
-    const fetchPages = () => {
+    const fetchPages = useCallback(async () => {
         // setIsFetching(true);
         getPages()
             .then((response) => {
@@ -57,10 +57,10 @@ const Pages = () => {
             .catch((error) => {
                 showToast(error?.response?.data?.error || error.message, '', 'error');
             });
-            // .finally(() => {
-            //     setIsFetching(false);
-            // });
-    };
+        // .finally(() => {
+        //     setIsFetching(false);
+        // });
+    }, []);
 
     const _onClose = () => {
         setCurrentPage(null);

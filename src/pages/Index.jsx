@@ -60,7 +60,7 @@ const Pages = () => {
         // .finally(() => {
         //     setIsFetching(false);
         // });
-    }, []);
+    }, [getPages]);
 
     const _onClose = () => {
         setCurrentPage(null);
